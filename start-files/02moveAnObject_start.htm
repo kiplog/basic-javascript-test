@@ -1,0 +1,74 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Move an object with form inputs</title>
+	<style>
+
+	* {
+		box-sizing: border-box;
+	}
+
+	body {
+		font: 1em arial;
+	}
+
+	div {
+		position: absolute;
+		top: 200px;
+		left: 200px;
+		width: 150px;
+		height: 150px;
+		padding: 1em;
+		border: 1px solid black;
+	}
+
+	form {
+		margin-bottom: 30px;
+	}
+
+	input {
+		margin: .75em;
+		padding: .75em;
+	}
+
+	input[type="button"] {
+		border: 1px solid #999;
+		display: block;
+	}
+
+	</style>
+	<script>
+
+	//
+	// Use the inputs in a form to move elements on a page.
+	//
+	// 1. using a form with 2 inputs - make sure they're numbers
+	// 2. write a script that gets the value out of each input
+	// 3. use those inputs to change the left and top position
+	//    of an image on the page
+	// 4. start with an inline click handler,
+	//    then try to add an eventlistener to the button
+
+	</script>
+</head>
+<body>
+
+	<h1 id="message">
+		Enter an x and y coordinate to movethe box
+	</h1>
+	<form id="newXY" action="#" method="get">
+		X: <input type="text" size="3" name="xVal"><br>
+		Y: <input type="text" size="3" name="yVal">
+
+		<input type="button" value="give me a position to move to">
+	</form>
+
+
+	<div id="box">
+		this div represents the object you need to move
+	</div>
+
+
+</body>
+</html>

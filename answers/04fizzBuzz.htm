@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Fizz Buzz boxes</title>
+<style>
+  #container {
+
+  }
+
+  </style>
+</head>
+<body>
+
+
+<div id="container">
+
+
+
+</div>
+
+  <script>
+
+
+  var fizzbuzz = [];
+  var result = "";
+  var box = document.getElementById('container');
+
+  for (var i=0; i<100; i++) {
+        fizzbuzz.push(i);
+      if ( fizzbuzz[i] == 0 )
+        { result = result + "zero <br />"; }
+      else if ( fizzbuzz[i] % 3 == 0 && fizzbuzz[i]% 5 == 0 )
+      { result = result + "FizzBuzz <br />"; }
+      else if ( fizzbuzz[i]%3 == 0 )
+      { result = result + "Fizz <br />"; }
+      else if ( fizzbuzz[i]%5 == 0 )
+      { result = result + "Buzz <br />"; }
+      else {
+        result = result + i + "<br />";
+      }
+
+  box.innerHTML = result;
+
+
+    }
+
+//  console.log(result);
+
+
+
+
+  </script>
+
+</body>
+</html>

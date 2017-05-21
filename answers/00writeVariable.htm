@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Write to the page</title>
+  <script>
+
+  // Using a function, create a message, and writes that message to a div with an ID.
+  //
+  // Create another message and write that to the first div in the document.
+
+
+  window.onload = function() {
+    var testDiv =
+    document.getElementById("testDiv");
+
+    testDiv.innerHTML =
+    "<p>Inserted<em>\"this\"<\/em> content.<\/p>";
+
+
+    var firstDiv =
+    document.getElementsByTagName("div")[0];
+
+    firstDiv.innerHTML =
+    "<p>Inserted<em>\"this\"<\/em> content into the first div.<\/p>";
+
+  }
+
+  </script>
+
+</head>
+<body>
+
+
+  <div id="firstDiv">
+    Stuff inside the first div
+  </div>
+  <div id="testDiv">
+    Stuff inside the div
+  </div>
+
+
+</body>
+</html>

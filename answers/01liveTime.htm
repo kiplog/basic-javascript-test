@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Live time, styled</title>
+
+  <style>
+
+  body {
+    margin: 0;
+    background: linear-gradient(to right, #dddfff, #bbbfff);
+  }
+
+  .main_screen {
+    width: 100vw;
+    height: 100vh;
+    position:relative;
+  }
+
+  .text{
+    width: 100%;
+    opacity:1;
+    padding:0;
+    top:40%;
+    top: calc(50% - 1.2em);
+    text-align:center;
+    font-family:"Open Sans", sans-serif;
+    font-size: 40px;
+    font-weight: 300;
+    letter-spacing: -.1em;
+    color:black;
+    position:absolute;
+    border: 1px solid red;
+  }
+
+
+  </style>
+</head>
+
+<body>
+
+  <div class="main_screen">
+    <div class="text" id="text">
+      DEFAULT TEXT
+    </div>
+  </div>
+
+
+
+  <script>
+
+  var textbox = document.getElementById('text');
+
+  function getMyTime() {
+    var t = new Date();
+    var hour = t.getHours();
+    var minute = t.getMinutes();
+    var realtime = t.toLocaleTimeString();
+
+    textbox.innerHTML = realtime;
+
+    setTimeout(getMyTime, 1000);
+  }
+  // var message = hour + ":" + minute;
+
+  getMyTime();
+
+
+  </script>
+</body>
+
+</html>

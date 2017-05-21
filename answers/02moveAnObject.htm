@@ -1,0 +1,84 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Move an object with form inputs</title>
+	<style>
+
+	* {
+		box-sizing: border-box;
+	}
+
+	body {
+	font: 1em arial;
+	}
+
+	div {
+		position: absolute;
+		top: 200px;
+		left: 200px;
+		width: 150px;
+		height: 150px;
+		padding: 1em;
+		border: 1px solid black;
+
+		transition: top 1s linear, left 1s 1s linear;
+	}
+
+	form {
+		margin-bottom: 30px;
+	}
+
+	input {
+			margin: .75em;
+			padding: .75em;
+	}
+
+	input[type="button"] {
+		border: 1px solid #999;
+		display: block;
+	}
+
+	</style>
+<script>
+
+
+
+function moveObject(elementID,formNum) {
+	x = document.forms[formNum].xVal.value;
+	y = document.forms[formNum].yVal.value;
+
+	var elem = document.getElementById(elementID);
+
+	if ( (x != "") || (y != "")) {
+		elem.style.left = x + 'px';
+		elem.style.top= y + 'px';
+	} else  {
+		var message = document.getElementById("message");
+		message.innerHTML = "please enter numbers!"
+	}
+
+}
+
+</script>
+</head>
+<body>
+
+<h1 id="message">
+	Enter an x and y coordinate to movethe box
+</h1>
+<form id="newXY" action="#" method="get">
+X: <input type="text" size="3" name="xVal"><br>
+Y: <input type="text" size="3" name="yVal">
+
+<input type="button" value="give me a position to move to" onclick="moveObject('box', 0)">
+</form>
+
+
+<div id="box">
+	this div represents the object you need to move
+</div>
+
+
+</body>
+</html>
