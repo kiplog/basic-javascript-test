@@ -2,6 +2,8 @@
 
 A basic JavaScript test - 5 simple coding challenges. The questions can be answered from the coding challenges.
 
+More note in this PDF : http://paulmccann.com/webdev4/javascript-test-questions.pdf
+
 ## Part I - basics
 
 Where does JavaScript go?
