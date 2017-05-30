@@ -3,11 +3,34 @@
 <head>
   <meta charset="UTF-8">
   <title>Write to the page</title>
+
+  <style>
+
+  p {
+    font: 3em arial;
+  }
+
+  </style>
+
+
+</head>
+<body>
+
+  <div id="firstDiv">
+    Stuff inside the first div
+  </div>
+  <div id="testDiv">
+    Stuff inside the div
+  </div>
+
   <script>
 
   // Using a function, create a message, and writes that message to a div with an ID.
   //
   // Create another message and write that to the first div in the document.
+
+  // in this example the function runs when the onload event fires.
+  // the function is anonymous,
 
 
   window.onload = function() {
@@ -27,17 +50,6 @@
   }
 
   </script>
-
-</head>
-<body>
-
-
-  <div id="firstDiv">
-    Stuff inside the first div
-  </div>
-  <div id="testDiv">
-    Stuff inside the div
-  </div>
 
 
 </body>

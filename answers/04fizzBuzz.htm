@@ -4,8 +4,20 @@
   <meta charset="UTF-8">
   <title>Fizz Buzz boxes</title>
 <style>
-  #container {
+ p {
+  color: black;
+  }
 
+  p:nth-child(3n +1) {
+   color: red; /* Fizz's will be red */
+   }
+
+  p:nth-child(5n+1) {
+   color: blue; /* Buzz's will be blue */
+  }
+
+  p:nth-child(15n+1) {
+   color: green; /* FizzBuzz's will be blue */
   }
 
   </style>
@@ -14,9 +26,6 @@
 
 
 <div id="container">
-
-
-
 </div>
 
   <script>
@@ -29,19 +38,16 @@
   for (var i=0; i<100; i++) {
         fizzbuzz.push(i);
       if ( fizzbuzz[i] == 0 )
-        { result = result + "zero <br />"; }
+      { result = "<p>zero </p>"; }
       else if ( fizzbuzz[i] % 3 == 0 && fizzbuzz[i]% 5 == 0 )
-      { result = result + "FizzBuzz <br />"; }
-      else if ( fizzbuzz[i]%3 == 0 )
-      { result = result + "Fizz <br />"; }
-      else if ( fizzbuzz[i]%5 == 0 )
-      { result = result + "Buzz <br />"; }
-      else {
-        result = result + i + "<br />";
-      }
+      { result = result + "<p>FizzBuzz </p>"; }
+      else if ( fizzbuzz[i]% 3 == 0 )
+      { result = result + "<p>Fizz </p>"; }
+      else if ( fizzbuzz[i]% 5 == 0 )
+      { result = result + "<p>Buzz </p>"; }
+      else { result = result + "<p>" + i + "</p>"; }
 
   box.innerHTML = result;
-
 
     }
 
