@@ -30,7 +30,7 @@
     letter-spacing: -.1em;
     color:black;
     position:absolute;
-    border: 1px solid red;
+    border: 0px solid red;
   }
 
 
@@ -55,13 +55,19 @@
     var t = new Date();
     var hour = t.getHours();
     var minute = t.getMinutes();
-    var realtime = t.toLocaleTimeString();
+    var seconds = t.getSeconds();
 
-    textbox.innerHTML = realtime;
+
+    var message = hour + ":" + minute + ":" + seconds;
+
+    textbox.innerHTML = message;
+
+    //  a better way is to use:
+    //  var realtime = t.toLocaleTimeString();
+    // textbox.innerHTML = realtime;
 
     setTimeout(getMyTime, 1000);
   }
-  // var message = hour + ":" + minute;
 
   getMyTime();
 

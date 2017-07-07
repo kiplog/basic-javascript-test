@@ -5,7 +5,13 @@
   <title>Fizz Buzz boxes</title>
 <style>
  p {
-  color: black;
+   display: inline-block;
+   padding: .5em;
+   margin: .25em;
+   width: 10vw;
+   border: 1px solid black;
+   color: black;
+   font: 18px arial;
   }
 
   p:nth-child(3n +1) {
@@ -31,32 +37,10 @@
   <script>
 
 
-  var fizzbuzz = [];
-  var result = "";
-  var box = document.getElementById('container');
-
-  for (var i=0; i<100; i++) {
-        fizzbuzz.push(i);
-      if ( fizzbuzz[i] == 0 )
-      { result = "<p>zero </p>"; }
-      else if ( fizzbuzz[i] % 3 == 0 && fizzbuzz[i]% 5 == 0 )
-      { result = result + "<p>FizzBuzz </p>"; }
-      else if ( fizzbuzz[i]% 3 == 0 )
-      { result = result + "<p>Fizz </p>"; }
-      else if ( fizzbuzz[i]% 5 == 0 )
-      { result = result + "<p>Buzz </p>"; }
-      else { result = result + "<p>" + i + "</p>"; }
-
-  box.innerHTML = result;
-
-    }
-
-//  console.log(result);
-
-
-
 
   </script>
+
+  <script src="js/scripts.js"></script>
 
 </body>
 </html>

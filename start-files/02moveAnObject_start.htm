@@ -13,24 +13,16 @@
 		font: 1em arial;
 	}
 
+
 	div {
 		position: absolute;
-		top: 200px;
+		border: 1px solid red;
+		padding: 2em;
 		left: 200px;
-		width: 150px;
-		height: 150px;
-		padding: 1em;
-		border: 1px solid black;
+		top: 200px;
 	}
 
-	form {
-		margin-bottom: 30px;
-	}
 
-	input {
-		margin: .75em;
-		padding: .75em;
-	}
 
 	input[type="button"] {
 		border: 1px solid #999;
@@ -61,13 +53,41 @@
 		X: <input type="text" size="3" name="xVal"><br>
 		Y: <input type="text" size="3" name="yVal">
 
-		<input type="button" value="give me a position to move to">
+		<input onclick="moveObject()" type="button" value="move object">
 	</form>
 
 
 	<div id="box">
-		this div represents the object you need to move
+		text
 	</div>
+
+
+	<script>
+
+	function moveObject() {
+
+	var x = document.forms[0].xVal.value;
+	var y = document.forms[0].yVal.value;
+
+	var box = document.getElementById('box');
+
+
+	if (x==="" || y==="") {
+		box.innerHTML = "please enter something";
+	}
+
+	if (isNaN(x) || isNaN(y)) {
+		box.innerHTML = "please enter a number";
+	}
+
+
+	box.style.left = x + "px";
+	box.style.top = y + "px";
+
+
+	}
+
+	</script>
 
 
 </body>
